@@ -1,0 +1,31 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    
+}
+div{
+    border: 6px solid rgb(73, 6, 73);
+}
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: rgb(246, 222, 246);
+    margin: 0em;
+    padding: 1px 40px;
+    border-width: 6px;
+    border-style: outset;
+    border-color: purple;
+    border-image: initial;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="/css/style1.css" rel="stylesheet" type="text/css">
+    <title>Edit User</title>
+</head>
+<body>
+   
+    
+    
+    <div class="data">
+        <h1> Edit Your Data</h1>
+    <form method ="post" action ="/show/<%= items._id %>?_method=PUT">
+        <label> Name</label>
+        <input type ="text" name ="name" value="<%= items.name%>"> <br>
+
+        <label for="birthday">Date of Birth</label>
+        <input type ="date" name ="date" value="<%=items.date%>"> <br>
+
+        <label>City & State</label>
+        <input type ="text" name="add" value="<%=items.add%>"><br>
+
+        <label>Street</label>
+        <input type="text" name="st" value="<%=items.st%>"><br>
+
+        <label>Zip Code</label>
+        <input type="text" name="zip" value="<%=items.zip%>"><br>
+
+        <label>Grade</label>
+        <input type="text" name="grade" value="<%=items.grade%>"><br>
+
+        <label for="school">School:</label>
+        <select id="school" name="school" value="<%=items.school%>">
+            <option value=""></option>
+            <option value="Viva Verde High School">Viva Verde High School</option>
+            <option value="Cactus Canyon High School">Cactus Canyon High School</option>
+            <option value="Aquinas High School">Aquinas High School</option>
+            <option value="pazla High School">Pazla High School</option>
+        </select> <br>
+
+        <label>Gender</label>
+        <input type="text" name="Gender" value="<%=items.Gender%>"> <br>
+        
+        <label> Important Notes</label>
+        <textarea name="note" rows="2" cols="35" value="<%=items.note%>"> </textarea> <br>
+<br>
+<h1>Guardian</h1>
+            <label>Name</label>
+            <input type ="text" name ="names" value="<%=items.Adult%>"> <br>
+
+            <label>Relationship</label>
+            <input type ="text" name ="relationship" value="<%=items.relationship%>"> <br>
+
+            <label>City & State</label>
+            <input type ="text" name="adds" value="<%=items.Parentadd%>"> <br>
+
+            <label>Street</label>
+            <input type="text" name="sts" value="<%=items.sts%>"> <br>
+
+            <label>Zip Code</label>
+            <input type="text" name="zips" value="<%=items.zips%>"> <br>
+
+        <label>Phone</label>
+        <input type ="text" name ="phone" value="<%=items.phone%>"><br>
+
+        <label> Email</label>
+        <input type ="text" name ="email" value="<%= items.email%>"> <br>
+
+        <label>Place of Employment</label>
+        <input type ="text" name="poe" value="<%=items.poe%>"> <br>
+
+        <label>Important Notes</label>
+        <textarea name="notes" rows="2" cols="35" value="<%=items.notes%>"></textarea><br>
+<div class="button">
+        <button>Submit</button>
+    </div><br>
+    </form>
+    </div>
+   
+</body>
+</html>

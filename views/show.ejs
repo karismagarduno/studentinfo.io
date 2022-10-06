@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="/css/style1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>User Data</title>
+
+</head>
+<body>
+    
+    
+    <div class="data"> 
+    <h1> Show Your Data</h1>
+    <div class="nav">
+        
+        <form action="/search" method="post">
+            <input id="search" type="text" name="search" placeholder="Search by Student Name"><br>
+         <input id="searched" type="submit" value="Search">
+        </form>
+        
+      </div>
+    <div class="container mt-5 w-50">
+
+    </div>
+   
+
+    
+       <% for (let item of items) { %>
+        
+        <li ><%= item.name %> </li> 
+        <li  ><%= item.date %> </li> 
+        <li  ><%= item.add %> </li>
+        <li  ><%= item.st %> </li>  
+        <li ><%= item.zip %> </li>
+        <li  ><%= item.grade %> </li>  
+        <li  ><%= item.school %> </li>
+        <li  ><%= item.Gender %> </li>
+        <li  ><%= item.note %> </li>
+        <li  ><%= item.Adult %> </li>
+        <li ><%= item.relationship %> </li> 
+        <li ><%= item.Parentadd %> </li> 
+        <li ><%= item.sts %> </li>
+        <li ><%= item.zips %> </li>
+        <li><%= item.phone %> </li> 
+        <li><%= item.email %> </li> 
+        <li ><%= item.poe %> </li> 
+        <li ><%= item.notes %> </li> 
+   
+        <br>
+        <div class="button">
+            <button>
+                <a href="/show/<%= item._id %>/edit">Edit</a> 
+            </button>
+        </div>
+            <form action="/show/<%= item._id %>?_method=DELETE"  method="POST">
+                
+                <br>
+                <button>Delete</button>
+             </form>
+            
+             <br>
+             <br>
+         
+
+
+        </li>
+        <%} %>
+    
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
